@@ -1,0 +1,52 @@
+@model CardioModel[]
+
+@{
+    ViewData["Title"] = "Week 4";
+}
+
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+    .blokken{
+        border: 5px solid darkgray;    
+        background-color: whitesmoke;
+        border-radius: 25px;
+        padding: 5px;
+        padding-left: 20px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    h2 {
+        color: darkgray;
+        
+    }
+    input{
+        width: 65px;
+        border: none;
+        font-weight: bold;
+    }
+    img{
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        margin: auto;  
+    }
+    
+</style>
+
+<h1>Schema voor Week 4</h1>
+
+@foreach (var cardio in Model)
+{
+    <div class="blokken">
+        <h2>@cardio.Exercise</h2>
+        <p>Tijdsduur: @cardio.Time seconden</p>
+        <p>Herhalingen: @cardio.Reps</p>
+        <p>Beschrijving: @cardio.Description</p>
+        <img src="@cardio.Image.File.Url" width="600px" height="400px"> 
+    </div>
+
+}

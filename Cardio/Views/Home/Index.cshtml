@@ -1,0 +1,103 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<CardioModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 70px;
+    }
+    .blokken{
+        border: 5px solid darkgray;    
+        background-color: whitesmoke;
+        border-radius: 25px;
+        padding: 5px;
+        padding-left: 20px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    h2 {
+        color: darkgray;
+        
+    }
+    input{
+        width: 65px;
+        border: none;
+        font-weight: bold;
+    }
+    .button{
+        border: 2px solid darkgray;    
+        background-color: whitesmoke;
+        border-radius: 10px;
+        padding: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: gray;
+        text-decoration: none;
+        margin: 25px;
+        text-align: center;
+    }
+
+    .button:hover{
+        text-decoration: none;
+        color: black;
+       
+    }
+    #buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .radiobutton{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 40px;
+    }
+    
+</style>
+
+
+<h1>Cardio Kalender</h1>
+
+
+<div id="buttons">
+    <a class="button" asp-area="" asp-controller="Home" asp-action="Week1">Week 1 </br>Dag 1-7</a>
+    <a class="button" asp-area="" asp-controller="Home" asp-action="Week2">Week 2</br>Dag 8-14</a>
+    <a class="button" asp-area="" asp-controller="Home" asp-action="Week3">Week 3</br>Dag 15-21</a>
+    <a class="button" asp-area="" asp-controller="Home" asp-action="Week4">Week 4</br>Dag 22-28</a>
+</div>
+
+@* <form>
+    <div class="radiobutton">
+        <input type="radio" id="1" name="week" value="1">
+        <label for="1">Week 1</label><br>
+    </div>
+    <div class="radiobutton">
+        <input type="radio" id="2" name="week" value="2">
+        <label for="2">Week 2</label><br>
+    </div>
+    <div class="radiobutton">
+        <input type="radio" id="3" name="week" value="3">
+        <label for="3">Week 3</label><br>
+    </div>
+    <div class="radiobutton">
+        <input type="radio" id="4" name="week" value="4">
+        <label for="4">Week 4</label>
+    </div>
+</form> *@
+
+
+
+
+
+
+
